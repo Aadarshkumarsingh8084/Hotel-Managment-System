@@ -5,4 +5,4 @@
 
 <h1>Rooms</h1>
 
-![image alt]()
+![image alt](https://github.com/Aadarshkumarsingh8084/Hotel-Managment-System/blob/2038b23d7abe3321db07348775573883f349fb67/Screenshot%202025-03-30%20183846.png)
