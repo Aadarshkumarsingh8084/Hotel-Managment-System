@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hotel Management System</h1>
+            <nav>
+                <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+                <button class="nav-btn" data-section="rooms">Rooms</button>
+                <button class="nav-btn" data-section="bookings">Bookings</button>
+                <button class="nav-btn" data-section="guests">Guests</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Available Rooms</h3>
+                        <p id="available-rooms">12</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Occupied Rooms</h3>
+                        <p id="occupied-rooms">8</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Today's Check-ins</h3>
+                        <p id="checkins-today">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Today's Check-outs</h3>
+                        <p id="checkouts-today">2</p>
+                    </div>
+                </div>
+                <div class="recent-bookings">
+                    <h3>Recent Bookings</h3>
+                    <table id="recent-bookings-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Guest Name</th>
+                                <th>Room</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Rooms Section -->
+            <section id="rooms" class="content-section">
+                <h2>Room Management</h2>
+                <div class="room-controls">
+                    <button id="add-room-btn">Add New Room</button>
+                    <div class="search-box">
+                        <input type="text" id="room-search" placeholder="Search rooms...">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <div class="room-list">
+                    <table id="rooms-table">
+                        <thead>
+                            <tr>
+                                <th>Room No.</th>
+                                <th>Type</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Bookings Section -->
+            <section id="bookings" class="content-section">
+                <h2>Booking Management</h2>
+                <div class="booking-controls">
+                    <button id="new-booking-btn">New Booking</button>
+                    <div class="filter-options">
+                        <select id="booking-filter">
+                            <option value="all">All Bookings</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="current">Current</option>
+                            <option value="past">Past</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="booking-list">
+                    <table id="bookings-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Guest</th>
+                                <th>Room</th>
+                                <th>Dates</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Guests Section -->
+            <section id="guests" class="content-section">
+                <h2>Guest Management</h2>
+                <div class="guest-controls">
+                    <button id="add-guest-btn">Add New Guest</button>
+                    <div class="search-box">
+                        <input type="text" id="guest-search" placeholder="Search guests...">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <div class="guest-list">
+                    <table id="guests-table">
+                        <thead>
+                            <tr>
+                                <th>Guest ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Bookings</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for forms -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
